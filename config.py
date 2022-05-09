@@ -1,14 +1,15 @@
 import os
 
 
-
 class Config:
     '''
     General configuration parent class
     '''
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
     # simple mde  configurations
     SIMPLEMDE_JS_IIFE = True
@@ -22,7 +23,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch'
+    
 
 
 class TestConfig(Config):
@@ -36,8 +38,6 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch'
     DEBUG = True
 
 
