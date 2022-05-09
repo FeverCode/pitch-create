@@ -1,0 +1,68 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro %} {% block content %}
+<div class="div">
+  <div class="card">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5
+          class="card-text"
+          style="color: rgb(10, 65, 65); font-size: larger;"
+        >
+          {{quote.quote}}
+        </h5>
+        <p class="">
+          <strong style="font-style: italic;">Author :</strong>
+          <small
+            ><span style="text-decoration: underline; font-size: 13px;"
+              >{{quote.author}}</span
+            >
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="particles-js">
+  <h2 class="text-center" id="posts"></h2>
+  <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
+    <li class="nav-item">
+      <a id="cats" class="nav-link" data-toggle="tab" href="#all"
+        ><strong>1 min Pitches</strong>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cats" data-toggle="tab" href="#jobs"
+        >Programming Pitches</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cats" data-toggle="tab" href="#event"
+        >Sentimental Pitches</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cats" data-toggle="tab" href="#ads"
+        >I got Jokes Pitches</a
+      >
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="container tab-pane active" id="all">
+      <br />
+      {{ macro.display(pitches) }}
+    </div>
+    <div class="container tab-pane fade" id="event">
+      <br />
+      {{ macro.display(event)}}
+    </div>
+    <div class="container tab-pane fade" id="jobs">
+      <br />
+      {{ macro.display(job) }}
+    </div>
+    <div class="container tab-pane fade" id="ads">
+      <br />
+      {{ macro.display(advertisement) }}
+    </div>
+  </div>
+</div>
+{% endblock%}
