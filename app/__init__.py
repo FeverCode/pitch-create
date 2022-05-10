@@ -1,6 +1,6 @@
 from config import config_options
 from flask import Flask
-from flask_mail import Mail
+# from flask_mail import Mail
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
@@ -8,7 +8,7 @@ from flask_uploads import IMAGES, UploadSet, configure_uploads
 from flask_migrate import Migrate
 
 db = SQLAlchemy()
-mail = Mail()
+# mail = Mail()
 bootstap = Bootstrap()
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
@@ -34,6 +34,6 @@ def create_app(config_name):
     db.init_app(app)
     bootstap.init_app(app)
     configure_uploads(app, photos)
-    mail.init_app(app)
+    # mail.init_app(app)
     migrate.init_app(app,db)
     return app
