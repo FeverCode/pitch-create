@@ -18,7 +18,7 @@
 <p>In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful? This is an application that allows users to use that one minute wisely. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them..</p>
 
 Live link to the project
-[Pitch-Create]()
+[Pitch-Create](https://pitch-create.herokuapp.com/)
 
 ## Requirements
 * A computer running on either Windows, MacOS or Ubuntu operating system installed with the following:
