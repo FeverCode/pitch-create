@@ -17,11 +17,15 @@ photos = UploadSet('photos', IMAGES)
 
 def create_app(config_name):
     app = Flask(__name__)
+    
+    #creating app configs
     app.config.from_object(config_options[config_name])
-    from .auth import auth as authentication_blueprint
+    
+    #.....
+    from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint, url_prefix='/authenticate')
+    
     from .main import main as main_blueprint
-
-    app.register_blueprint(authentication_blueprint)
     app.register_blueprint(main_blueprint)
 
     login_manager.init_app(app)
