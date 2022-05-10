@@ -25,5 +25,5 @@ class BlogModelTest(unittest.TestCase):
 
     def test_get_pitch(self):
         self.new_pitch.save()
-        got_pitch = Pitch.get_pitch(1)
+        get_pitch = Pitch.get_pitch(1)
         self.assertTrue(get_pitch is not None)
