@@ -6,7 +6,7 @@ from app import db
 class BlogModelTest(unittest.TestCase):
     def setUp(self):
         self.user_essy = User(
-            username='cha', password='chako', email='test@test.com')
+            username='slam', password='slamster', email='test@test.com')
         self.new_pitch = Pitch(
             id=1, title='Test', content='This is a test pitch', user_id=self.user_essy.id)
 

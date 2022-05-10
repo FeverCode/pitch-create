@@ -5,7 +5,7 @@ from app.models import Comment, Pitch, User
 
 class UserTest(unittest.TestCase):
     def setUp(self):
-        self.new_user = User(username='essy', password='qwerty')
+        self.new_user = User(username='g', password='qwerty')
 
     def test_password_setter(self):
         self.assertTrue(self.new_user.password is not None)
